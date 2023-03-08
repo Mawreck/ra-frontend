@@ -1,0 +1,27 @@
+@import "src/bootstrap-required";
+
+:host {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 7.2rem;
+  background: var(--dark-blue-500);
+
+  .text {
+    font-size: 1.6rem;
+    color: var(--white);
+  }
+}
+
+@include media-breakpoint-up(md) {
+  :host {
+    position: revert;
+  }
+}
