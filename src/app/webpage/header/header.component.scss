@@ -1,0 +1,64 @@
+@import "src/bootstrap-required";
+
+:host {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 7.2rem;
+  background: var(--dark-blue-500);
+
+  .brand-logo {
+    width: 12.5rem;
+    height: auto;
+
+    .white {
+      fill: var(--white);
+    }
+
+    .orange {
+      fill: var(--orange-500);
+    }
+  }
+
+  .header-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1.6rem;
+    cursor: pointer;
+
+    &:hover {
+      .bi, .text {
+        color: var(--orange-500);
+      }
+    }
+
+    &.active {
+      .bi, .text {
+        color: var(--orange-500);
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .header-container {
+    justify-content: center;
+    gap: 5rem;
+
+    .brand-logo {
+      width: 20rem;
+      height: auto;
+    }
+  }
+}
