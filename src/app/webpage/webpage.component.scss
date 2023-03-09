@@ -12,10 +12,10 @@
   flex-direction: column;
   overflow-y: auto;
   margin: 72px 0;
+  background: var(--gray-100);
 
   .router-wrapper {
     flex: 1;
-    background: var(--gray-100);
     padding: 2rem;
   }
 }
@@ -23,5 +23,10 @@
 @include media-breakpoint-up(md) {
   .main-container {
     margin-bottom: revert;
+
+    .router-wrapper {
+      width: 50%;
+      align-self: center;
+    }
   }
 }
