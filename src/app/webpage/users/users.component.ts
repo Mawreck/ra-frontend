@@ -25,8 +25,8 @@ export class UsersComponent implements OnInit {
       ).subscribe();
   }
 
-  showAlbums(username: string, id: number) {
-    this.router.navigate([username.toLowerCase(), "albums", id]);
+  showAlbums(username: string, userId: number) {
+    this.router.navigate([username, "albums", userId]);
   }
 
 }
