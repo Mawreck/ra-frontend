@@ -9,7 +9,7 @@ export type ActionType = "ADD"
 export interface Log {
   username: string;
   logType: LogType;
-  logTypeId: number;
+  logTypeId?: number;
   action: ActionType;
   dateCreated?: Date;
 }
