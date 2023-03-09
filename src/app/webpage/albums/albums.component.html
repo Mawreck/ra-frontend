@@ -1,0 +1,51 @@
+<div class="form-container">
+  <div class="field-container">
+    <label
+      class="form-label"
+      for="firstName"
+      translate>webpage.albums.title-label
+    </label>
+
+    <input
+      class="form-control"
+      type="text"
+      id="firstName"
+      [placeholder]="'webpage.albums.title-placeholder' | translate"
+      [formControl]="formGroup.controls.title">
+  </div>
+
+  <div class="actions-container">
+    <h1 class="title" translate>webpage.albums.add-album</h1>
+    <i class="bi bi-plus-circle" (click)="onAddAlbumClick()"></i>
+  </div>
+</div>
+
+<div class="albums-container">
+  <div class="card" *ngFor="let album of albums">
+    <div class="card-body">
+      <div class="content-container">
+        <h5 class="card-title"
+            [translate]="'webpage.albums.album-id'"
+            [translateParams]="{ albumId: album.id }">
+        </h5>
+
+        <h5 class="card-title"
+            [translate]="'webpage.albums.album-title'"
+            [translateParams]="{ albumTitle: album.title }">
+        </h5>
+      </div>
+
+      <div class="actions-container">
+        <a class="btn btn-primary"
+           translate
+           (click)="showAlbum(album.id)">webpage.albums.show-album
+        </a>
+
+        <a class="btn btn-primary"
+           translate
+           (click)="deleteAlbum(album.id)">webpage.albums.delete-album
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
