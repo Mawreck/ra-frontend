@@ -1,3 +1,5 @@
+@import "src/bootstrap-required";
+
 .form-container {
   .field-container {
     .form-label {
@@ -35,5 +37,19 @@
   .btn {
     font-size: 1.6rem;
     border-radius: revert;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .cards-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .cards-container {
+      .card {
+        width: 250px;
+      }
+    }
   }
 }
