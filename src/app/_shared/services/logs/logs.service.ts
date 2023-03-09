@@ -8,7 +8,7 @@ import { Log, LogResponse } from "./logs.model";
 })
 export class LogsService {
 
-  private readonly BASE_URL = "http://localhost:8080/api";
+  private readonly BASE_URL = "https://ra-backend.herokuapp.com/api";
 
   constructor(
     private httpClient: HttpClient
