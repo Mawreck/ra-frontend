@@ -3,7 +3,7 @@ const express = require("express");
 const app = express();
 
 const configureServer = () => {
-  const PROJECT_NAME = "ridango-albums";
+  const PROJECT_NAME = "ra-frontend";
 
   app.use(express.static(__dirname + `/dist/${ PROJECT_NAME }`));
 

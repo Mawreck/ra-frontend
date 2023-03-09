@@ -1,6 +1,6 @@
 {
-  "name": "ridango-albums",
-  "version": "0.0.0",
+  "name": "ra-frontend",
+  "version": "1.0.0",
   "engines": {
     "node": "v14.17.0",
     "npm": "8.3.0"
