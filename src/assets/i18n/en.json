@@ -5,5 +5,21 @@
   "webpage.footer.copyright": "©2022 Ridango",
   "webpage.albums.album-index": "Album number: {{ albumIndex }}",
   "webpage.albums.album-id": "Album id: {{ albumId }}",
-  "webpage.albums.album-title": "Title: {{ albumTitle }}"
+  "webpage.albums.album-title": "Title: {{ albumTitle }}",
+  "webpage.albums.title-label": "Album name",
+  "webpage.albums.title-placeholder": "Album",
+  "webpage.albums.add-album": "Add album",
+  "webpage.albums.show-album": "Show album",
+  "webpage.albums.delete-album": "Delete album",
+  "webpage.album.title-label": "Photo title",
+  "webpage.album.title-placeholder": "Photo title",
+  "webpage.album.image-url-label": "Image url",
+  "webpage.albums.image-url-placeholder": "Image url",
+  "webpage.albums.add-photo": "Add photo",
+  "webpage.albums.delete-photo": "Delete photo",
+  "webpage.logs.username": "Username: {{ username }}",
+  "webpage.logs.log-type": "Log Type: {{ logType }}",
+  "webpage.logs.log-type-id": "Log Type Id: {{ logTypeId }}",
+  "webpage.logs.action": "Action: {{ action }}",
+  "webpage.logs.created-date": "Created Date: {{ dateCreated }}"
 }
