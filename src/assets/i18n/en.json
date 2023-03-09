@@ -3,7 +3,6 @@
   "webpage.header.users": "Users",
   "webpage.header.logs": "Logs",
   "webpage.footer.copyright": "©2022 Ridango",
-  "webpage.albums.album-index": "Album number: {{ albumIndex }}",
   "webpage.albums.album-id": "Album id: {{ albumId }}",
   "webpage.albums.album-title": "Title: {{ albumTitle }}",
   "webpage.albums.title-label": "Album name",
