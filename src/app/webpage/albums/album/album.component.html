@@ -1,0 +1,53 @@
+<div class="form-container">
+  <div class="field-container">
+    <label
+      class="form-label"
+      for="title"
+      translate>webpage.album.title-label
+    </label>
+
+    <input
+      class="form-control"
+      type="text"
+      id="title"
+      [placeholder]="'webpage.album.title-placeholder' | translate"
+      [formControl]="formGroup.controls.title">
+  </div>
+
+  <div class="field-container">
+    <label
+      class="form-label"
+      for="imageUrl"
+      translate>webpage.album.image-url-label
+    </label>
+
+    <input
+      class="form-control"
+      type="text"
+      id="imageUrl"
+      [placeholder]="'webpage.albums.image-url-placeholder' | translate"
+      [formControl]="formGroup.controls.imageUrl">
+  </div>
+
+  <div class="actions-container">
+    <h1 class="title" translate>webpage.albums.add-photo</h1>
+    <i class="bi bi-plus-circle" (click)="onAddPhotoClick()"></i>
+  </div>
+</div>
+
+<div class="cards-container">
+  <div class="card" *ngFor="let photo of photos">
+    <img class="card-img-top" [src]="photo.imageUrl">
+
+    <div class="card-body">
+      <h1 class="card-title">{{ photo.title }}</h1>
+
+      <p class="card-text">{{ photo.imageUrl }}</p>
+    </div>
+
+    <a class="btn btn-primary"
+       translate
+       (click)="deletePhoto(photo.id)">webpage.albums.delete-photo
+    </a>
+  </div>
+</div>
