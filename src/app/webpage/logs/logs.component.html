@@ -1,0 +1,29 @@
+<div class="logs-container">
+  <div class="log" *ngFor="let log of logs">
+    <p class="username"
+       [translate]="'webpage.logs.username'"
+       [translateParams]="{ username: log.username }">
+    </p>
+
+    <p class="log-type"
+       [translate]="'webpage.logs.log-type'"
+       [translateParams]="{ logType: log.logType }">
+    </p>
+
+    <p class="log-type-id" *ngIf="log.logTypeId"
+       [translate]="'webpage.logs.log-type-id'"
+       [translateParams]="{ logTypeId: log.logTypeId }">
+    </p>
+
+    <p class="action"
+       [ngClass]="{
+        'green': log.action === 'ADD',
+        'red': log.action === 'DELETE'
+        }"
+       [translate]="'webpage.logs.action'"
+       [translateParams]="{ action: log.action }">
+    </p>
+
+    <p class="date">{{ 'webpage.logs.created-date' | translate : { dateCreated: log.dateCreated | date } }}</p>
+  </div>
+</div>
