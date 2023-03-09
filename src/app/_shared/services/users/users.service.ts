@@ -1,6 +1,7 @@
 import { Injectable } from "@angular/core";
 import { map, Observable } from "rxjs";
 import { HttpClient } from "@angular/common/http";
+import { User, UserResponse } from "./users.model";
 
 @Injectable({
   providedIn: "root"
@@ -14,8 +15,8 @@ export class UsersService {
   ) {
   }
 
-  getUsers(): Observable<any> {
-    return this.httpClient.get<any>(`${ this.BASE_URL }/users`)
+  getUsers(): Observable<User[]> {
+    return this.httpClient.get<UserResponse>(`${ this.BASE_URL }/users`)
       .pipe(
         map(data => data._embedded.users)
       );
