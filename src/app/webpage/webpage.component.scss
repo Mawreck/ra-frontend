@@ -1,0 +1,27 @@
+@import "src/bootstrap-required";
+
+:host {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  margin: 72px 0;
+
+  .router-wrapper {
+    flex: 1;
+    background: var(--gray-100);
+    padding: 2rem;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .main-container {
+    margin-bottom: revert;
+  }
+}
